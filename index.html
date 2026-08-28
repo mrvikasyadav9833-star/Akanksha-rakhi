@@ -8,264 +8,264 @@
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-font-family: "Segoe UI", sans-serif;
-min-height:100vh;
-background:linear-gradient(135deg,#ffe8f1,#f5e8ff,#e5f4ff);
-color:#432f42;
-overflow-x:hidden;
+    font-family:"Segoe UI",sans-serif;
+    min-height:100vh;
+    background:linear-gradient(135deg,#ffe8f1,#f5e8ff,#e5f4ff);
+    color:#432f42;
+    overflow-x:hidden;
 }
 
 section{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:25px 16px;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px 16px;
 }
 
 .card{
-width:100%;
-max-width:800px;
-padding:35px 25px;
-border-radius:30px;
-background:rgba(255,255,255,.78);
-backdrop-filter:blur(12px);
-box-shadow:0 15px 50px rgba(70,30,70,.15);
-text-align:center;
+    width:100%;
+    max-width:800px;
+    padding:35px 25px;
+    border-radius:30px;
+    background:rgba(255,255,255,.82);
+    backdrop-filter:blur(12px);
+    box-shadow:0 15px 50px rgba(70,30,70,.15);
+    text-align:center;
 }
 
 h1{
-font-size:clamp(42px,10vw,72px);
-color:#d64f87;
+    font-size:clamp(42px,10vw,72px);
+    color:#d64f87;
 }
 
 h2{
-color:#d64f87;
-font-size:32px;
-margin-bottom:18px;
+    color:#d64f87;
+    font-size:32px;
+    margin-bottom:18px;
 }
 
 p{
-line-height:1.8;
-font-size:17px;
+    line-height:1.8;
+    font-size:17px;
 }
 
 button{
-border:none;
-background:#d64f87;
-color:white;
-padding:15px 25px;
-border-radius:50px;
-font-size:16px;
-cursor:pointer;
-margin-top:25px;
-box-shadow:0 8px 20px rgba(214,79,135,.25);
-transition:.3s;
+    border:none;
+    background:#d64f87;
+    color:white;
+    padding:15px 25px;
+    border-radius:50px;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:25px;
+    box-shadow:0 8px 20px rgba(214,79,135,.25);
+    transition:.3s;
 }
 
 button:hover{
-transform:translateY(-3px) scale(1.03);
+    transform:translateY(-3px) scale(1.03);
 }
 
 .emoji{
-font-size:65px;
-margin-bottom:15px;
+    font-size:65px;
+    margin-bottom:15px;
 }
 
-/* floating hearts */
+/* Floating hearts */
 
 .heart{
-position:fixed;
-bottom:-30px;
-pointer-events:none;
-animation:floatUp 7s linear infinite;
-opacity:0;
-z-index:0;
+    position:fixed;
+    bottom:-30px;
+    pointer-events:none;
+    animation:floatUp 7s linear infinite;
+    opacity:0;
+    z-index:0;
 }
 
 @keyframes floatUp{
-0%{
-transform:translateY(0) rotate(0);
-opacity:0;
-}
-20%{
-opacity:.7;
-}
-100%{
-transform:translateY(-110vh) rotate(360deg);
-opacity:0;
-}
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+    20%{
+        opacity:.7;
+    }
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
 }
 
-/* hidden sections */
+/* Hidden pages */
 
 .hidden{
-display:none;
+    display:none;
 }
 
-/* memory cards */
+/* Memory cards */
 
 .memories{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-gap:16px;
-margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:16px;
+    margin-top:25px;
 }
 
 .memory{
-background:white;
-border-radius:22px;
-padding:22px 16px;
-box-shadow:0 7px 20px rgba(70,30,70,.08);
-transition:.3s;
+    background:white;
+    border-radius:22px;
+    padding:22px 16px;
+    box-shadow:0 7px 20px rgba(70,30,70,.08);
+    transition:.3s;
 }
 
 .memory:hover{
-transform:translateY(-6px);
+    transform:translateY(-6px);
 }
 
 .memory-icon{
-font-size:40px;
+    font-size:40px;
 }
 
 .memory h3{
-color:#d64f87;
-margin:10px 0;
+    color:#d64f87;
+    margin:10px 0;
 }
 
-/* envelope */
+/* Envelope */
 
 .envelope{
-width:180px;
-height:120px;
-margin:25px auto;
-background:#f58ab1;
-border-radius:10px;
-position:relative;
-cursor:pointer;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
+    width:180px;
+    height:120px;
+    margin:25px auto;
+    background:#f58ab1;
+    border-radius:10px;
+    position:relative;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .envelope:before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-border-left:90px solid transparent;
-border-right:90px solid transparent;
-border-top:65px solid #ffb3cc;
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    border-left:90px solid transparent;
+    border-right:90px solid transparent;
+    border-top:65px solid #ffb3cc;
 }
 
 .envelope span{
-position:absolute;
-bottom:42px;
-left:0;
-width:100%;
-color:white;
-font-weight:bold;
-z-index:2;
+    position:absolute;
+    bottom:42px;
+    left:0;
+    width:100%;
+    color:white;
+    font-weight:bold;
+    z-index:2;
 }
 
-/* letter */
+/* Letter */
 
 .letter{
-display:none;
-margin-top:25px;
-background:#fff8fb;
-padding:25px;
-border-radius:22px;
-text-align:left;
-line-height:1.8;
-animation:showLetter .7s ease;
+    display:none;
+    margin-top:25px;
+    background:#fff8fb;
+    padding:25px;
+    border-radius:22px;
+    text-align:left;
+    line-height:1.8;
+    animation:showLetter .7s ease;
 }
 
 @keyframes showLetter{
-from{
-opacity:0;
-transform:translateY(15px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-/* rakhi */
+/* Rakhi */
 
 .rakhi{
-font-size:90px;
-animation:rakhiPop 1s ease;
+    font-size:90px;
+    animation:rakhiPop 1s ease;
 }
 
 @keyframes rakhiPop{
-0%{
-transform:scale(0);
-opacity:0;
-}
-70%{
-transform:scale(1.2);
-}
-100%{
-transform:scale(1);
-opacity:1;
-}
+    0%{
+        transform:scale(0);
+        opacity:0;
+    }
+    70%{
+        transform:scale(1.2);
+    }
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
 }
 
 .wrist{
-margin:25px auto;
-width:230px;
-height:75px;
-background:#e8ad83;
-border-radius:50px;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-box-shadow:inset 0 -5px 10px rgba(0,0,0,.08);
+    margin:25px auto;
+    width:230px;
+    height:75px;
+    background:#e8ad83;
+    border-radius:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    box-shadow:inset 0 -5px 10px rgba(0,0,0,.08);
 }
 
 .rakhi-band{
-width:190px;
-height:15px;
-background:#d64f87;
-border-radius:20px;
-position:relative;
+    width:190px;
+    height:15px;
+    background:#d64f87;
+    border-radius:20px;
+    position:relative;
 }
 
 .rakhi-center{
-position:absolute;
-width:45px;
-height:45px;
-border-radius:50%;
-background:#ffd66b;
-border:5px solid #d64f87;
-left:73px;
-top:-15px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:22px;
+    position:absolute;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#ffd66b;
+    border:5px solid #d64f87;
+    left:73px;
+    top:-15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
 }
 
-/* final */
+/* Final */
 
 .signature{
-color:#d64f87;
-font-size:24px;
-font-weight:bold;
-margin-top:25px;
+    color:#d64f87;
+    font-size:24px;
+    font-weight:bold;
+    margin-top:25px;
 }
 
 .small{
-font-size:13px;
-opacity:.6;
-margin-top:20px;
+    font-size:13px;
+    opacity:.6;
+    margin-top:20px;
 }
 </style>
 </head>
@@ -273,16 +273,23 @@ margin-top:20px;
 <body>
 
 <script>
-const floating=["❤️","💗","💕","🌸","✨","🫶"];
+const floating=[
+    "❤️","💗","💕","🌸","✨","🫶"
+];
 
 for(let i=0;i<25;i++){
-let heart=document.createElement("div");
-heart.className="heart";
-heart.innerHTML=floating[Math.floor(Math.random()*floating.length)];
-heart.style.left=Math.random()*100+"%";
-heart.style.animationDelay=Math.random()*7+"s";
-heart.style.fontSize=(15+Math.random()*22)+"px";
-document.body.appendChild(heart);
+
+    let heart=document.createElement("div");
+
+    heart.className="heart";
+    heart.innerHTML=
+        floating[Math.floor(Math.random()*floating.length)];
+
+    heart.style.left=Math.random()*100+"%";
+    heart.style.animationDelay=Math.random()*7+"s";
+    heart.style.fontSize=(15+Math.random()*22)+"px";
+
+    document.body.appendChild(heart);
 }
 </script>
 
@@ -293,22 +300,25 @@ document.body.appendChild(heart);
 
 <div class="card">
 
-<div class="emoji">🌸</div>
+    <div class="emoji">🌸</div>
 
-<h1>Hey Akanksha...</h1>
+    <h1>Hey Akanksha...</h1>
 
-<p style="margin-top:15px;">
-I made something for you.
-</p>
+    <p style="margin-top:15px;">
+        I made something for you.
+    </p>
 
-<p>
-It's not expensive.<br>
-It's not something you can buy from a shop.
-</p>
+    <p>
+        It's not something you can buy from a shop.
+    </p>
 
-<button onclick="nextPage(1,2)">
-Open it 💌
-</button>
+    <p>
+        It's just a little piece of our memories. ❤️
+    </p>
+
+    <button onclick="nextPage(1,2)">
+        Open it 💌
+    </button>
 
 </div>
 
@@ -321,31 +331,31 @@ Open it 💌
 
 <div class="card">
 
-<div class="emoji">🥹❤️</div>
+    <div class="emoji">🥹❤️</div>
 
-<h2>There's something I want you to know</h2>
+    <h2>There's something I want you to know</h2>
 
-<p>
-You told me that you wanted to come near my house
-and tie Rakhi to me.
-</p>
+    <p>
+        You told me that you wanted to come near my house
+        and tie Rakhi to me.
+    </p>
 
-<br>
+    <br>
 
-<p>
-And I told you that I wouldn't be home at that time.
-</p>
+    <p>
+        And I told you that I wouldn't be home at that time.
+    </p>
 
-<br>
+    <br>
 
-<p>
-But there was something I didn't really know
-how to say properly...
-</p>
+    <p>
+        There was something I didn't really know
+        how to explain properly...
+    </p>
 
-<button onclick="nextPage(2,3)">
-Continue 🌷
-</button>
+    <button onclick="nextPage(2,3)">
+        Continue 🌷
+    </button>
 
 </div>
 
@@ -358,40 +368,48 @@ Continue 🌷
 
 <div class="card">
 
-<div class="emoji">💔➡️❤️</div>
+    <div class="emoji">💗</div>
 
-<h2>The truth is...</h2>
+    <h2>The truth is...</h2>
 
-<p>
-I don't have much money right now.
-</p>
+    <p>
+        This year, things didn't work out
+        the way I hoped they would.
+    </p>
 
-<br>
+    <br>
 
-<p>
-And I felt bad that I couldn't do something special
-for you or even be there when you wanted to tie
-Rakhi to me.
-</p>
+    <p>
+        So I couldn't be there when you wanted
+        to come and tie Rakhi to me.
+    </p>
 
-<br>
+    <br>
 
-<p>
-But then I realised something.
-</p>
+    <p>
+        And honestly...
+        I felt bad about that.
+    </p>
 
-<br>
+    <br>
 
-<p style="font-size:21px;">
-<b>
-A brother-sister bond isn't measured by money.
-❤️
-</b>
-</p>
+    <p style="font-size:21px;">
+        <b>
+        Not because of the Rakhi itself,
+        but because I really wanted to be there.
+        ❤️
+        </b>
+    </p>
 
-<button onclick="nextPage(3,4)">
-So I made this instead... ✨
-</button>
+    <br>
+
+    <p>
+        But then I thought...
+    </p>
+
+    <button onclick="nextPage(3,4)">
+        I found another way 🌸
+    </button>
 
 </div>
 
@@ -404,45 +422,45 @@ So I made this instead... ✨
 
 <div class="card">
 
-<div class="emoji">🧸</div>
+    <div class="emoji">🧸</div>
 
-<h2>Our Little Story</h2>
+    <h2>Our Little Story</h2>
 
-<p>
-We knew each other since 5th class.
-</p>
+    <p>
+        We knew each other since 5th class.
+    </p>
 
-<br>
+    <br>
 
-<p>
-Then in 6th, we became friends.
-</p>
+    <p>
+        Then in 6th, we became friends.
+    </p>
 
-<br>
+    <br>
 
-<p>
-And somewhere along the way,
-our friendship became something much more special.
-</p>
+    <p>
+        And somewhere along the way,
+        our friendship became something much more special.
+    </p>
 
-<br>
+    <br>
 
-<p>
-You became someone I could call my sister.
-Not because we share the same blood...
-</p>
+    <p>
+        You became someone I could call my sister.
+    </p>
 
-<br>
+    <br>
 
-<p style="font-size:20px;">
-<b>
-but because we share memories. 🫶
-</b>
-</p>
+    <p style="font-size:20px;">
+        <b>
+        Not because we share the same blood...
+        but because we share memories. 🫶
+        </b>
+    </p>
 
-<button onclick="nextPage(4,5)">
-Our memories 🎀
-</button>
+    <button onclick="nextPage(4,5)">
+        Our memories 🎀
+    </button>
 
 </div>
 
@@ -455,69 +473,69 @@ Our memories 🎀
 
 <div class="card">
 
-<h2>Things I'll Always Remember 🥹</h2>
+    <h2>Things I'll Always Remember 🥹</h2>
 
-<div class="memories">
+    <div class="memories">
 
-<div class="memory">
-<div class="memory-icon">🏃‍♂️🏃‍♀️</div>
-<h3>Pakda-Pakdi</h3>
-<p>
-Running around and playing together
-like those moments would last forever.
-</p>
-</div>
+        <div class="memory">
+            <div class="memory-icon">🏃‍♂️🏃‍♀️</div>
+            <h3>Pakda-Pakdi</h3>
+            <p>
+                Running around and playing together
+                like those moments would last forever.
+            </p>
+        </div>
 
-<div class="memory">
-<div class="memory-icon">✋😂</div>
-<h3>Red Hand</h3>
-<p>
-One of those simple games that somehow
-became a memory worth keeping.
-</p>
-</div>
+        <div class="memory">
+            <div class="memory-icon">✋😂</div>
+            <h3>Red Hand</h3>
+            <p>
+                One of those simple games that somehow
+                became a memory worth keeping.
+            </p>
+        </div>
 
-<div class="memory">
-<div class="memory-icon">🎮</div>
-<h3>Class Games</h3>
-<p>
-Boys vs Girls, group games and all
-the random fun we had in class.
-</p>
-</div>
+        <div class="memory">
+            <div class="memory-icon">🎮</div>
+            <h3>Class Games</h3>
+            <p>
+                Boys vs Girls, group games and all
+                the random fun we had in class.
+            </p>
+        </div>
 
-<div class="memory">
-<div class="memory-icon">📜</div>
-<h3>Char Chitthi</h3>
-<p>
-Another silly little game,
-another memory with you.
-</p>
-</div>
+        <div class="memory">
+            <div class="memory-icon">📜</div>
+            <h3>Char Chitthi</h3>
+            <p>
+                Another silly little game,
+                another memory with you.
+            </p>
+        </div>
 
-<div class="memory">
-<div class="memory-icon">🪑🤫</div>
-<h3>Back Benches</h3>
-<p>
-Talking at the back benches during lectures.
-Definitely our most productive classes. 😂
-</p>
-</div>
+        <div class="memory">
+            <div class="memory-icon">🪑🤫</div>
+            <h3>Back Benches</h3>
+            <p>
+                Talking at the back benches during lectures.
+                Definitely our most productive classes. 😂
+            </p>
+        </div>
 
-<div class="memory">
-<div class="memory-icon">🫂</div>
-<h3>Just Us</h3>
-<p>
-More than the games,
-I remember having you as a friend.
-</p>
-</div>
+        <div class="memory">
+            <div class="memory-icon">🫂</div>
+            <h3>Just Us</h3>
+            <p>
+                More than the games,
+                I remember having you as a friend.
+            </p>
+        </div>
 
-</div>
+    </div>
 
-<button onclick="nextPage(5,6)">
-I wrote you a letter 💌
-</button>
+    <button onclick="nextPage(5,6)">
+        I wrote you a letter 💌
+    </button>
 
 </div>
 
@@ -530,96 +548,104 @@ I wrote you a letter 💌
 
 <div class="card">
 
-<div class="emoji">💌</div>
+    <div class="emoji">💌</div>
 
-<h2>A Letter For You</h2>
+    <h2>A Letter For You</h2>
 
-<p>
-Tap the envelope.
-</p>
+    <p>
+        Tap the envelope.
+    </p>
 
-<div class="envelope" onclick="openLetter()">
-<span>OPEN ❤️</span>
-</div>
+    <div class="envelope" onclick="openLetter()">
+        <span>OPEN ❤️</span>
+    </div>
 
-<div id="letter" class="letter">
+    <div id="letter" class="letter">
 
-<p>
-Dear Akanksha,
-</p>
+        <p>
+            Dear Akanksha,
+        </p>
 
-<br>
+        <br>
 
-<p>
-I honestly don't know when you became
-more than just a friend.
-</p>
+        <p>
+            I honestly don't know when you became
+            more than just a friend.
+        </p>
 
-<br>
+        <br>
 
-<p>
-We started as classmates.
-Then we became friends.
-And somehow, you became my sister.
-</p>
+        <p>
+            We started as classmates.
+            Then we became friends.
+            And somehow, you became my sister.
+        </p>
 
-<br>
+        <br>
 
-<p>
-You wanting to come and tie Rakhi to me
-actually means a lot to me.
-</p>
+        <p>
+            You wanting to come and tie Rakhi to me
+            actually means a lot to me.
+        </p>
 
-<br>
+        <br>
 
-<p>
-I'm sorry I won't be there this time.
-It isn't because I don't want your Rakhi.
-</p>
+        <p>
+            I'm sorry I won't be there this time.
+            It isn't because I don't want your Rakhi.
+        </p>
 
-<br>
+        <br>
 
-<p>
-I really do.
-</p>
+        <p>
+            I really do.
+        </p>
 
-<br>
+        <br>
 
-<p>
-I just couldn't manage things financially,
-and I didn't know how to explain that properly.
-</p>
+        <p>
+            Sometimes things just don't work out
+            the way we want them to.
+        </p>
 
-<br>
+        <br>
 
-<p>
-So instead of buying you something,
-I made you something.
-</p>
+        <p>
+            But I didn't want this Rakhi to pass
+            without telling you how much your gesture
+            means to me.
+        </p>
 
-<br>
+        <br>
 
-<p>
-It may be just a website,
-but every part of it carries a memory.
-</p>
+        <p>
+            So instead of buying you something,
+            I made you something.
+        </p>
 
-<br>
+        <br>
 
-<p>
-Thank you for being my sister.
-❤️
-</p>
+        <p>
+            It may be just a website,
+            but every part of it carries a memory.
+        </p>
 
-<div class="signature">
-— Vikas 🫶
-</div>
+        <br>
 
-</div>
+        <p>
+            Thank you for being my sister.
+            ❤️
+        </p>
 
-<button onclick="nextPage(6,7)">
-One last thing... 🌸
-</button>
+        <div class="signature">
+            — Vikas 🫶
+        </div>
+
+    </div>
+
+    <button onclick="nextPage(6,7)">
+        One last thing... 🌸
+    </button>
 
 </div>
 
@@ -632,72 +658,85 @@ One last thing... 🌸
 
 <div class="card">
 
-<div class="emoji">🎀</div>
+    <div class="emoji">🎀</div>
 
-<h2>Will you tie my Rakhi?</h2>
+    <h2>Will you tie my Rakhi?</h2>
 
-<p>
-Even if I'm not there in person...
-</p>
+    <p>
+        Even if I'm not there in person...
+    </p>
 
-<br>
+    <br>
 
-<p>
-I wanted to create a tiny place where
-your Rakhi could still reach me.
-</p>
+    <p>
+        I wanted to create a tiny place where
+        your Rakhi could still reach me.
+    </p>
 
-<button onclick="tieRakhi()">
-Tie Rakhi ❤️
-</button>
+    <br>
 
-<div id="rakhiArea" style="display:none;">
+    <p>
+        So imagine this little screen as my wrist
+        waiting for your Rakhi. 🥹
+    </p>
 
-<div class="wrist">
+    <button onclick="tieRakhi()">
+        Tie Rakhi ❤️
+    </button>
 
-<div class="rakhi-band">
+    <div id="rakhiArea" style="display:none;">
 
-<div class="rakhi-center">
-🪷
-</div>
+        <div class="wrist">
 
-</div>
+            <div class="rakhi-band">
 
-</div>
+                <div class="rakhi-center">
+                    🪷
+                </div>
 
-<div class="rakhi">🎀</div>
+            </div>
 
-<h2>Rakhi Received ❤️</h2>
+        </div>
 
-<p>
-Thank you, Akanksha.
-</p>
+        <div class="rakhi">🎀</div>
 
-<br>
+        <h2>Rakhi Received ❤️</h2>
 
-<p>
-Distance, money or circumstances
-can't change what you mean to me.
-</p>
+        <p>
+            Thank you, Akanksha.
+        </p>
 
-<br>
+        <br>
 
-<p style="font-size:21px;">
-<b>
-Happy Raksha Bandhan, Sister. 🫂❤️
-</b>
-</p>
+        <p>
+            No matter where we are,
+            a Rakhi can't be measured by distance.
+        </p>
 
-<div class="signature">
-Your brother,<br>
-Vikas
-</div>
+        <br>
 
-<p class="small">
-Made with memories, not money. 🌸
-</p>
+        <p>
+            And neither can a brother-sister bond.
+        </p>
 
-</div>
+        <br>
+
+        <p style="font-size:21px;">
+            <b>
+            Happy Raksha Bandhan, Sister. 🫂❤️
+            </b>
+        </p>
+
+        <div class="signature">
+            Your brother,<br>
+            Vikas
+        </div>
+
+        <p class="small">
+            Made with memories, love and a little bit of code. 🌸
+        </p>
+
+    </div>
 
 </div>
 
@@ -708,71 +747,74 @@ Made with memories, not money. 🌸
 
 function nextPage(current,next){
 
-document.getElementById("page"+current).style.display="none";
+    document.getElementById("page"+current).style.display="none";
 
-document.getElementById("page"+next).style.display="flex";
+    document.getElementById("page"+next).style.display="flex";
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 }
+
 
 function openLetter(){
 
-document.getElementById("letter").style.display="block";
+    document.getElementById("letter").style.display="block";
 
 }
+
 
 function tieRakhi(){
 
-document.getElementById("rakhiArea").style.display="block";
+    document.getElementById("rakhiArea").style.display="block";
 
-for(let i=0;i<25;i++){
+    for(let i=0;i<30;i++){
 
-let heart=document.createElement("div");
+        let heart=document.createElement("div");
 
-heart.innerHTML="❤️";
+        heart.innerHTML="❤️";
 
-heart.style.position="fixed";
-heart.style.left="50%";
-heart.style.top="50%";
-heart.style.fontSize="25px";
-heart.style.pointerEvents="none";
-heart.style.zIndex="999";
+        heart.style.position="fixed";
+        heart.style.left="50%";
+        heart.style.top="50%";
+        heart.style.fontSize="25px";
+        heart.style.pointerEvents="none";
+        heart.style.zIndex="999";
 
-let x=(Math.random()-0.5)*500;
-let y=(Math.random()-0.5)*500;
+        let x=(Math.random()-0.5)*550;
+        let y=(Math.random()-0.5)*550;
 
-heart.animate(
-[
-{
-transform:"translate(-50%,-50%) scale(0)",
-opacity:1
-},
-{
-transform:
-`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(1.5)`,
-opacity:0
-}
-],
-{
-duration:1200,
-easing:"ease-out"
-}
-);
+        heart.animate(
+            [
+                {
+                    transform:"translate(-50%,-50%) scale(0)",
+                    opacity:1
+                },
+                {
+                    transform:
+                    `translate(calc(-50% + ${x}px),
+                    calc(-50% + ${y}px)) scale(1.5)`,
+                    opacity:0
+                }
+            ],
+            {
+                duration:1300,
+                easing:"ease-out"
+            }
+        );
 
-document.body.appendChild(heart);
+        document.body.appendChild(heart);
 
-setTimeout(()=>{
-heart.remove();
-},1200);
-}
+        setTimeout(()=>{
+            heart.remove();
+        },1300);
+    }
 
-window.scrollTo({
-top:document.body.scrollHeight,
-behavior:"smooth"
-});
+    window.scrollTo({
+        top:document.body.scrollHeight,
+        behavior:"smooth"
+    });
 }
 
 </script>
